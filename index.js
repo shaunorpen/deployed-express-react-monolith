@@ -20,6 +20,10 @@ app.get("/api/friends", (_req, res) => {
   res.json(friends);
 });
 
+app.get("/", (_req, res) => {
+  res.sendFile(__dirname + "/client/build/index.html");
+});
+
 app.listen(port, () => {
   console.log("listening on " + port);
 });
